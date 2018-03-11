@@ -4,14 +4,23 @@ All the tasks until reaching the decision stage are performed.At the decision po
 
 
 Okey => 5 red
-Combination List: 6,6,6/13,13/9,10/  ya 10-10 u almalısın ya da 10-11 u almalıyız.WinPoint artışına göre karar verilebilir.Black 10 is used in 2 different place(**)
-Example Case:                           HasJoker?               DifferentColorCase                     SameColorConsequtive                    WinPoint                                                                HasOtherPlayersHand    
-1.player                                    Yes                  6,6,6/13,13/10,10                       /9,10/10,11/6,7                                                                                                (Y)6,(BL)6,(B)6/(R)13,(B)13/10(Y),10(B)/10(B)-11(B)
-                                                                                                                                              -1 +1 -2 -1 -2 +2 -1 +1 -2 (-5) calculation without Joker                                          -1 Red +1Red /-2 blue,-1Yellow /-2 blue +2 blue/-1 black 9 +1 black 9/-2 black 12
-																																			   for 10-11 and 10-10 okey is placed both right and left then winpoint is calcualted.	
-                                                                                                                                               +8 okey-10-11-okey +1 ===> 
-                                                                                                                                               			+9 -5 ==> 4 calculation with Joker																																   
-																								*6,7 can be a combination,but if 6 is handled in consequtive,it disrupt hand.																			  
+Combination List: 6,6,6/13,13/9,10/  either  10-10  or 10-11 will be in combination list. 
+WinPoint artışına göre karar verilebilir.Black 10 is used in 2 different place(**)
+Example Case: 
+Player :1.player                           
+HasJoker?   Yes            
+DifferentColorCase     6,6,6/13,13/10,10                                       
+SameColorConsequtive       /9,10/10,11/6,7                                                                                                             
+WinPoint  
+(Yellow)6,(Blue)6,(Blue)6/(Red)13,(Blue)13/10(Yellow),10(Blue)/10(Blue)-11(Blue)
+ -1 +1 -2 -1 -2 +2 -1 +1 -2 (-5) calculation without Joker                                          -1 Red +1Red /-2 blue,-1Yellow /-2 blue +2 blue/-1 black 9 +1 black 9/-2 black 12
+If there is a right or left value in other players deck, write -1.Otherwise, the possibility of coming tile is handled.																									 
+For 10-11 and 10-10 JOKER is placed both right and left then win-point is calculated.	
++8 okey-10-11-okey +1 ===> 
++9 -5 ==> 4 calculation with Joker							
+*6,7 can be a combination, but if 6 is handled in consequtive, it will  disrupt hand.It is not assessed in combination list.																			  
+																																														  
+																		  
 																																														  
 Red 3,13,5
 Yellow 10,6,9,2
