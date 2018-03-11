@@ -22,10 +22,7 @@ For 10-11 and 10-10 JOKER is placed both right and left then win-point is calcul
 																																														  
 																		  
 																																														  
-Red 3,13,5
-Yellow 10,6,9,2
-Blue 1,6,1
-Black 7,6,13,11,10
+1.player's Hand => Red 3,13,5 Yellow 10,6,9,2 Blue 1,6,1 Black 7,6,13,11,10
 
 2.player                                   Yes                    5,5/12,12/2,2                            /1,2
 
