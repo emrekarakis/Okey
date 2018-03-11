@@ -1,6 +1,6 @@
 package okey;
 
-public class Tiles implements Comparable<Tiles>{
+public class Tiles implements Comparable<Tiles> {
 
 	private String color;
 	private Integer realNumber;
@@ -65,9 +65,9 @@ public class Tiles implements Comparable<Tiles>{
 
 	@Override
 	public int compareTo(Tiles tile) {
-		  int code=((Tiles)tile).getCode();
-	        /* For Ascending order*/
-	        return this.code-code;
+		int code = ((Tiles) tile).getCode();
+		/* For Ascending order */
+		return this.code - code;
 	}
 
 }

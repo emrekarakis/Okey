@@ -328,56 +328,58 @@ public class Helper {
 		for (int i = 0; i < currentPlayerStack.size(); i++) {
 			currentTile = currentPlayerStack.get(i);
 			addedTiles = new ArrayList<Tiles>();
-			for (int j = 0; j < currentPlayerStack.size()-4; j++) {
+			for (int j = 0; j < currentPlayerStack.size() - 4; j++) {
 				if ((i != j) && (currentTile.getColor().equalsIgnoreCase(currentPlayerStack.get(j).getColor()))) {
-					if((j+3)<=currentPlayerStack.size()){
-					addedTiles = lastElementConditionForQuintet(currentTile, currentPlayerStack.get(j),
-							currentPlayerStack.get(j + 1), currentPlayerStack.get(j + 2),
-							currentPlayerStack.get(j + 3));
-					if (addedTiles != null) {
-						remainingTiles = new ArrayList<Tiles>();
-						// remainingTiles=divideList(currentPlayerStack, i, j);
-						remainingTiles = updateCurrentPlayerStack(currentPlayerStack, 5, i);
-						generalSameColorConsequtiveList.add(addedTiles);
-
-					} else {
-
-						addedTiles = lastElementConditionForQuadruple(currentTile, currentPlayerStack.get(j),
-								currentPlayerStack.get(j + 1), currentPlayerStack.get(j + 2));
+					if ((j + 3) <= currentPlayerStack.size()) {
+						addedTiles = lastElementConditionForQuintet(currentTile, currentPlayerStack.get(j),
+								currentPlayerStack.get(j + 1), currentPlayerStack.get(j + 2),
+								currentPlayerStack.get(j + 3));
 						if (addedTiles != null) {
 							remainingTiles = new ArrayList<Tiles>();
 							// remainingTiles=divideList(currentPlayerStack, i,
 							// j);
-							remainingTiles = updateCurrentPlayerStack(currentPlayerStack, 4, i);
+							remainingTiles = updateCurrentPlayerStack(currentPlayerStack, 5, i);
 							generalSameColorConsequtiveList.add(addedTiles);
+
 						} else {
-							addedTiles = lastElementConditionForTriple(currentTile, currentPlayerStack.get(j),
-									currentPlayerStack.get(j + 1));
+
+							addedTiles = lastElementConditionForQuadruple(currentTile, currentPlayerStack.get(j),
+									currentPlayerStack.get(j + 1), currentPlayerStack.get(j + 2));
 							if (addedTiles != null) {
 								remainingTiles = new ArrayList<Tiles>();
 								// remainingTiles=divideList(currentPlayerStack,
-								// i, j);
-								remainingTiles = updateCurrentPlayerStack(currentPlayerStack, 3, i);
+								// i,
+								// j);
+								remainingTiles = updateCurrentPlayerStack(currentPlayerStack, 4, i);
 								generalSameColorConsequtiveList.add(addedTiles);
 							} else {
-								addedTiles = lastElementConditionForBinary(currentTile, currentPlayerStack.get(j));
+								addedTiles = lastElementConditionForTriple(currentTile, currentPlayerStack.get(j),
+										currentPlayerStack.get(j + 1));
 								if (addedTiles != null) {
 									remainingTiles = new ArrayList<Tiles>();
 									// remainingTiles=divideList(currentPlayerStack,
 									// i, j);
-									remainingTiles = updateCurrentPlayerStack(currentPlayerStack, 2, i);
+									remainingTiles = updateCurrentPlayerStack(currentPlayerStack, 3, i);
 									generalSameColorConsequtiveList.add(addedTiles);
 								} else {
-									throw new Exception(
-											"Any length of list to be added to generalList could not be found.");
+									addedTiles = lastElementConditionForBinary(currentTile, currentPlayerStack.get(j));
+									if (addedTiles != null) {
+										remainingTiles = new ArrayList<Tiles>();
+										// remainingTiles=divideList(currentPlayerStack,
+										// i, j);
+										remainingTiles = updateCurrentPlayerStack(currentPlayerStack, 2, i);
+										generalSameColorConsequtiveList.add(addedTiles);
+									} else {
+										throw new Exception(
+												"Any length of list to be added to generalList could not be found.");
+									}
 								}
 							}
-						}
 
+						}
 					}
 				}
 			}
-		}
 		}
 
 	}

@@ -61,8 +61,8 @@ public class Printer {
 			System.out.println("Key-->" + each + " Value-->" + hmap.get(each));
 		}
 	}
-	
-	public void printMapWithList(Map<Integer, List<Tiles>> hmap){
+
+	public void printMapWithList(Map<Integer, List<Tiles>> hmap) {
 		for (Integer each : hmap.keySet()) {
 			System.out.println("Key-->" + each);
 			printList(hmap.get(each));
