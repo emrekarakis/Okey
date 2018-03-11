@@ -35,7 +35,7 @@ public class Main {
         printer.printStackOfEachPlayer();
         helper.differentColorCase(helper.getCurrentPlayer());
         helper.differentColorCaseForOtherPlayer();
-        System.out.println("----------------------------burdan sonra ");
+        System.out.println("----------------------------");
         helper.sameColorConsequtiveCase();
         System.err.println("************");
         helper.sortPlayersDeck(helper.getCurrentPlayer());
