@@ -5,7 +5,7 @@ All the tasks until reaching the decision stage are performed.At the decision po
 
 Okey => 5 red
 Combination List: 6,6,6/13,13/9,10/  either  10-10  or 10-11 will be in combination list. 
-WinPoint artışına göre karar verilebilir.Black 10 is used in 2 different place(**)
+We will decide according to the increase of WinPoint.Black 10 is used in 2 different place(**)
 Example Case: 
 Player :1.player                           
 HasJoker?   Yes            
